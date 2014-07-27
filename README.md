@@ -65,7 +65,11 @@ You get two keys:
 
 ### Requesting an authentication token from OVH
 
-We will request a token from OVH to enable the OVH fencing agent to make requests to the API. You have to go to https://eu.api.ovh.com/1.0/auth/credential and specify:
+We will request a token from OVH to enable the OVH fencing agent to make requests to the API. Specifically we will only ask for being able to perform these requests:
+
+* PUT /dedicated/server/{serviceName} (Change boot device)
+* POST /dedicated/server/{serviceName}/reboot (Hard reboot your dedicated server)
+* GET /dedicated/server/{serviceName}/task/{taskId}
 
 
 
