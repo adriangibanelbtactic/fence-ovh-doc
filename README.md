@@ -77,6 +77,53 @@ We will request a token from OVH to enable the OVH fencing agent to make request
 
 In order to perform this request we will use our a home-made script named [fencing-ovh-request-authentication-code.sh](../master/fencing-ovh-request-authentication-code.sh) [(I recommend you to download it as raw file)] (https://github.com/adriangibanelbtactic/fence-ovh-doc/raw/master/fencing-ovh-request-authentication-code.sh).
 
+You will have to edit the file so that it meets your needs.
+Please modify:
+```
+# Variables you should adapt to your own case:
+OVH_APPLICATION_KEY="7kbG7Bk7S9Nt7ZSV"
+DEDICATED_SERVER_OVH_NAMES="ns1100101.ip-101-01-01.eu ns2200202.ip-202-02-02.eu ns3300303.ip-003-03-03.eu" # Separated by spaces
+```
+so that you use your own application key (AK) and so that put your dedicated server ovh names separated by spaces.
+
+Then you just need to run it like this:
+
+```
+./fencing-ovh-request-authentication-code.sh
+```
+
+The response should be similar to:
+```
+{"validationUrl":
+"https://api.ovh.com/auth/?credentialToken=
+iQ1joJE0OmSPlUAoSw1IvAPWDeaD87ZM64HEDvYq77IKIxr4bIu6fU8OtrPQEeRh"
+,"consumerKey":
+"MtSwSrPpNjqfVSmJhLbPyr2i45lSwPU1",
+"state":"pendingValidation"}
+```
+First you need to write your consumer key (CK):
+```
+MtSwSrPpNjqfVSmJhLbPyr2i45lSwPU1
+```
+
+Now you need to visit:
+
+https://api.ovh.com/auth/?credentialToken=iQ1joJE0OmSPlUAoSw1IvAPWDeaD87ZM64HEDvYq77IKIxr4bIu6fU8OtrPQEeRh
+
+to aprove this request.
+
+First of all check the access granted to see if it corresponds to your servers and the forementioned needed requests.
+
+Then enter your customer ID, your password and the validity which we recommend to be **Unlimited** and click in **Authorize access** button.
+
+### Application keys have been generated ###
+
+After seeing that the OVH has validaded the consumer key now you have three important settings to handle to your Proxmox HA system sysadmin:
+
+* Application Key (**AK**): `7kbG7Bk7S9Nt7ZSV`
+* Secret Application Key (**AS**): `EXEgWIz07P0HYwtQDs7cNIqCiQaWSuHF`
+* Consumer key (**CK**): `MtSwSrPpNjqfVSmJhLbPyr2i45lSwPU1`
+
 Manual installation
 -------------------
 
