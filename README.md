@@ -15,10 +15,10 @@ If you need more information on why you need a fencing agent in your HA installa
 Index
 -----
 
-* Requirements
-* OVH application keys generation
-* Manual installation
-* Setting up your cluster.conf
+* [Requirements](#requirements)
+* [OVH application keys generation](#ovh-application-keys-generation)
+* [Manual installation](#manual-installation)
+* [Setting up your cluster.conf](#setting-up-your-clusterconf)
 
 Requirements
 ------------
