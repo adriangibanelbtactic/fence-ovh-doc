@@ -45,6 +45,10 @@ The other improvement is that the application is not granted all the OVH RESTful
 ### Requirements
 
 * curl program
+  * Each one of the OVH names for each one of the dedicated servers that conform your Proxmox cluster. Eg.
+    * `ns1100101.ip-101-01-01.eu`
+    * `ns2200202.ip-202-02-02.eu`
+    * `ns3300303.ip-003-03-03.eu`
 
 ### Who is in charge on generating OVH application keys
 
