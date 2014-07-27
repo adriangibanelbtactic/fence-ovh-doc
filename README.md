@@ -75,8 +75,7 @@ We will request a token from OVH to enable the OVH fencing agent to make request
 * POST /dedicated/server/{serviceName}/reboot (Hard reboot your dedicated server)
 * GET /dedicated/server/{serviceName}/task/{taskId}
 
-
-
+In order to perform this request we will use our a home-made script named [fencing-ovh-request-authentication-code.sh](../master/fencing-ovh-request-authentication-code.sh) [(I recommend you to download it as raw file)] (https://github.com/adriangibanelbtactic/fence-ovh-doc/raw/master/fencing-ovh-request-authentication-code.sh).
 
 Manual installation
 -------------------
