@@ -81,7 +81,7 @@ done
   -H "X-Ovh-Application: ${OVH_APPLICATION_KEY}" \
   -H "Content-type: application/json" \
 "${OVH_API_AUTH_CREDENTIAL_URL}"  -d "{
-    "accessRules": [
+    \"accessRules\": [
 ${POST_MAIN_RULES}
     ]
 }"
