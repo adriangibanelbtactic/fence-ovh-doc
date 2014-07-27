@@ -86,6 +86,11 @@ DEDICATED_SERVER_OVH_NAMES="ns1100101.ip-101-01-01.eu ns2200202.ip-202-02-02.eu 
 ```
 so that you use your own application key (AK) and so that put your dedicated server ovh names separated by spaces.
 
+First we give it execution permissions:
+```
+chmod +x fencing-ovh-request-authentication-code.sh
+```
+
 Then you just need to run it like this:
 
 ```
