@@ -59,6 +59,11 @@ You get two keys:
 * your secret application key, named **AS**, e.g:
 `EXEgWIz07P0HYwtQDs7cNIqCiQaWSuHF`
 
+### Requesting an authentication token from OVH
+
+We will request a token from OVH to enable the OVH fencing agent to make requests to the API. You have to go to https://eu.api.ovh.com/1.0/auth/credential and specify:
+
+
 
 
 Manual installation
