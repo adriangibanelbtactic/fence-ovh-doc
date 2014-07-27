@@ -42,6 +42,10 @@ Why? Because application or software that uses OVH RESTful API use a separated p
 
 The other improvement is that the application is not granted all the OVH RESTful API methods to be able to interact with. You can specify which API requests the application can only interact with.
 
+### Requirements
+
+* curl program
+
 ### Who is in charge on generating OVH application keys
 
 The Proxmox HA system sysadmin does not need to deal with OVH application keys. In order to make HA work it only needs **AK**, **AS** and **CK** for the fencing application. Your general sysadmin (the one with right for knowing OVH account user and password) should deal with this **AK**, **AS** and **CK** generation.
