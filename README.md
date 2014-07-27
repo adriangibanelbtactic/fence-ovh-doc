@@ -23,13 +23,13 @@ Index
 Requirements
 ------------
 
-* An High Availability (HA) system. ( This howto is based mainly in Proxmox. Actually the HA system needs the OVH fencing. )
-* OVH server. (This howto only makes sense if you are using dedicated servers in OVH datacentres)
-* Proxmox setup as a cluster. (We assume that Proxmox is already setup as a [cluster](https://pve.proxmox.com/wiki/Proxmox_VE_2.0_Cluster)).
-* Proxmox mostly setup as an HA cluster (We assume that you have begun to setup Proxmox as an [High Availability cluster](https://pve.proxmox.com/wiki/High_Availability_Cluster) and you are stuck at setting up a fencing agent inside OVH infraestructure.
-* Vrack . This is actually not strictly needed. However we recommend you to purchase [Vrack](https://www.ovh.co.uk/solutions/vrack/)  to ease Proxmox cluster communication setup. You will also have one dedicated network device for service and another one for communications as most suggested network setups. These are other technical pages about Vrack: [Vrack 1.0](http://help.ovh.co.uk/vrack) , Vrack 1.5(http://help.ovh.co.uk/VrackInfrastructure) . Vrack 2.0 (Being able to connect servers from different datacentres around the world) is supposed to come soon.
-* RipeVrack . This is actually not strictly needed. If you are used to setup your virtual machines network configuration as [Bridgeclient in OVH](http://help.ovh.co.uk/BridgeClient) we recommend you to switch to [RipeVrack](http://help.ovh.co.uk/RipeVrack) which it's the most suited for HA (no need to change .254 gateway).
-* OVH application keys. This is needed in order your OVH fencing agent to work. Don't worry if you don't have these OVH application keys because we will cover their generation in this howto.
+* **An High Availability (HA) system**. This howto is based mainly in Proxmox. Actually the HA system needs the OVH fencing.
+* **OVH dedicated server**. This howto only makes sense if you are using dedicated servers in OVH datacentres.
+* **Proxmox setup as a cluster**. We assume that Proxmox is already setup as a [cluster](https://pve.proxmox.com/wiki/Proxmox_VE_2.0_Cluster).
+* **Proxmox mostly setup as an HA cluster**. We assume that you have begun to setup Proxmox as an [High Availability cluster](https://pve.proxmox.com/wiki/High_Availability_Cluster) and you are stuck at setting up a fencing agent inside OVH infraestructure.
+* **Vrack** . This is actually not strictly needed. However we recommend you to purchase [Vrack](https://www.ovh.co.uk/solutions/vrack/)  to ease Proxmox cluster communication setup. You will also have one dedicated network device for service and another one for communications as most suggested network setups. These are other technical pages about Vrack: [Vrack 1.0](http://help.ovh.co.uk/vrack) , Vrack 1.5(http://help.ovh.co.uk/VrackInfrastructure) . Vrack 2.0 (Being able to connect servers from different datacentres around the world) is supposed to come soon.
+* **RipeVrack** . This is actually not strictly needed. If you are used to setup your virtual machines network configuration as [Bridgeclient in OVH](http://help.ovh.co.uk/BridgeClient) we recommend you to switch to [RipeVrack](http://help.ovh.co.uk/RipeVrack) which it's the most suited for HA (no need to change .254 gateway).
+* **OVH application keys**. This is needed in order your OVH fencing agent to work. Don't worry if you don't have these OVH application keys because we will cover their generation in this howto.
 
 OVH application keys generation
 -------------------------------
