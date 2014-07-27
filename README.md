@@ -34,6 +34,33 @@ Requirements
 OVH application keys generation
 -------------------------------
 
+### Introduction
+
+OVH introduced a new RESTful based API in 2014. This API has a different approach for authentication than the older SOAPI one. Basically it helps the OVH user to avoid handling their OVH account user and password to their sysadmins.
+
+Why? Because application or software that uses OVH RESTful API use a separated pair of keys for identifying themselves and a third key in addition for being able to interact with the RESTful API.
+
+The other improvement is that the application is not granted all the OVH RESTful API methods to be able to interact with. You can specify which API requests the application can only interact with.
+
+### Who is in charge on generating OVH application keys
+
+The Proxmox HA system sysadmin does not need to deal with OVH application keys. In order to make HA work it only needs **AK**, **AS** and **CK** for the fencing application. Your general sysadmin (the one with right for knowing OVH account user and password) should deal with this **AK**, **AS** and **CK** generation.
+
+Alternatively you can handle OVH account user and password to your Proxmox HA system sysadmin temporarily while it makes: **AK**, **AS** and **CK** and then change the OVH account password.
+
+### Creation of your application keys
+
+Click on the following link: https://eu.api.ovh.com/createApp/, enter your customer ID, your password, and the name of your application. If your bussiness is called **mybu** we recommend you to use: **mybu-fencing-agent** as the application name.
+
+You get two keys:
+* the application key, named **AK**, e.g:
+`7kbG7Bk7S9Nt7ZSV`
+
+* your secret application key, named **AS**, e.g:
+`EXEgWIz07P0HYwtQDs7cNIqCiQaWSuHF`
+
+
+
 Manual installation
 -------------------
 
