@@ -136,3 +136,17 @@ Manual installation
 Setting up your cluster.conf
 ----------------------------
 
+You can find an example of a cluster.conf based on three nodes depicted above here: [cluster_3_nodes.conf](../master/cluster_3_nodes.conf) [(I recommend you to download it as raw file)] (https://github.com/adriangibanelbtactic/fence-ovh-doc/raw/master/cluster_3_nodes.conf).
+
+We will explain each one of the fence_ovh specific parametres
+
+* **port** : **(Required)** Dedicated server OVH name. In the past they were in the form `ns1100101.ovh.net` now they are something similar to: `ns1100101.ip-101-01-01.eu`
+* **power_wait**: **(Optional)** Default timeout after asking OVH is to reboot is 240 seconds. You can change this timeout with this parametre. Units: seconds.
+* **login**: **(Required)** Application Key (**AK**): E.g. `7kbG7Bk7S9Nt7ZSV`
+* **passwd**: **(Required)** Secret Application Key (**AS**): E.g. `EXEgWIz07P0HYwtQDs7cNIqCiQaWSuHF`
+* **ovhcustomerkey**: **(Required)** Consumer key (**CK**): E.g. `MtSwSrPpNjqfVSmJhLbPyr2i45lSwPU1`
+* **ovhapilocation**: **(Optional)** Either "EU" for Europe based OVH API or "CA" for Canada based OVH API. Default is "EU".
+
+As you might guess from cluster.conf the only action you are going to use is "off" which translates into the server booting into rescue mode and checking if it has booted into rescue mode in less than 240 seconds.
+
+Note: OVH will fail the reboot the operation if it takes longer than 300 seconds no matter what power_wait value you define here.
