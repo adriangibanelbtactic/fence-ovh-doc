@@ -133,6 +133,25 @@ After seeing that the OVH has validaded the consumer key now you have three impo
 Manual installation
 -------------------
 
+You only need a manual installation if fence_ovh is not coming by default in Proxmox, on your HA system, or if you feel that its version is outdated.
+
+Note: This manual installation will overwrite `/usr/sbin/fence_ovh` file which might be your distribution default fence script for OVH. Feel free to backup it prior to the manual installation if you want to return back to previous status.
+
+Please use the script: [install_fence_ovh.sh](../master/install_fence_ovh.sh) [(I recommend you to download it as raw file)] (https://github.com/adriangibanelbtactic/fence-ovh-doc/raw/master/install_fence_ovh.sh)
+
+First we give it execution permissions:
+```
+chmod +x install_fence_ovh.sh
+```
+
+Then you just need to run it **as the root user** like this:
+
+```
+./install_fence_ovh.sh
+```
+
+
+
 Setting up your cluster.conf
 ----------------------------
 
