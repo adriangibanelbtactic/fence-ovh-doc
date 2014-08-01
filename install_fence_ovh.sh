@@ -4,14 +4,9 @@ COMMIT="master"
 
 cd /usr/sbin
 
-wget "https://raw.githubusercontent.com/adriangibanelbtactic/fence-agents/${COMMIT}/fence/agents/ovh/fence_ovh.py" -O fence_new_ovh
+wget "https://raw.githubusercontent.com/adriangibanelbtactic/fence-agents/${COMMIT}/fence/agents/ovh/fence_ovh.py" -O fence_ovh
 
-sed -i 's~@FENCEAGENTSLIBDIR@~/usr/local/share/fence-ovh~g' fence_new_ovh
-
-# Fastmage only - Begin
-#sed -i 's~STATUS_RESCUE_PRO_SLEEP = 360~STATUS_RESCUE_PRO_SLEEP = 720~g' fence_new_ovh
-# Fastmage only - End
-
+sed -i 's~@FENCEAGENTSLIBDIR@~/usr/local/share/fence-ovh~g' fence_ovh
 
 chmod +x fence_ovh
 
