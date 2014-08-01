@@ -1,6 +1,6 @@
 #!/bin/bash
 
-COMMIT="master"
+COMMIT="without-ipmi"
 
 cd /usr/sbin
 

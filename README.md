@@ -76,7 +76,7 @@ We will request a token from OVH to enable the OVH fencing agent to make request
 * GET /dedicated/server/{serviceName}/task/{taskId} (Fetch task details)
 * GET /dedicated/server/{serviceName}/boot/ (Fetch server compatible netboots)
 
-In order to perform this request we will use our a home-made script named [fencing-ovh-request-authentication-code.sh](../master/fencing-ovh-request-authentication-code.sh) [(I recommend you to download it as raw file)] (https://github.com/adriangibanelbtactic/fence-ovh-doc/raw/master/fencing-ovh-request-authentication-code.sh).
+In order to perform this request we will use our a home-made script named [fencing-ovh-request-authentication-code.sh](../without-ipmi/fencing-ovh-request-authentication-code.sh) [(I recommend you to download it as raw file)] (https://github.com/adriangibanelbtactic/fence-ovh-doc/raw/without-ipmi/fencing-ovh-request-authentication-code.sh).
 
 You will have to edit the file so that it meets your needs.
 Please modify:
@@ -137,7 +137,7 @@ You only need a manual installation if fence_ovh is not coming by default in Pro
 
 Note: This manual installation will overwrite `/usr/sbin/fence_ovh` file which might be your distribution default fence script for OVH. Feel free to backup it prior to the manual installation if you want to return back to previous status.
 
-Please use the script: [install_fence_ovh.sh](../master/install_fence_ovh.sh) [(I recommend you to download it as raw file)] (https://github.com/adriangibanelbtactic/fence-ovh-doc/raw/master/install_fence_ovh.sh)
+Please use the script: [install_fence_ovh.sh](../without-ipmi/install_fence_ovh.sh) [(I recommend you to download it as raw file)] (https://github.com/adriangibanelbtactic/fence-ovh-doc/raw/without-ipmi/install_fence_ovh.sh)
 
 First we give it execution permissions:
 ```
@@ -155,7 +155,7 @@ Then you just need to run it **as the root user** like this:
 Setting up your cluster.conf
 ----------------------------
 
-You can find an example of a cluster.conf based on three nodes depicted above here: [cluster_3_nodes.conf](../master/cluster_3_nodes.conf) [(I recommend you to download it as raw file)] (https://github.com/adriangibanelbtactic/fence-ovh-doc/raw/master/cluster_3_nodes.conf).
+You can find an example of a cluster.conf based on three nodes depicted above here: [cluster_3_nodes.conf](../without-ipmi/cluster_3_nodes.conf) [(I recommend you to download it as raw file)] (https://github.com/adriangibanelbtactic/fence-ovh-doc/raw/without-ipmi/cluster_3_nodes.conf).
 
 We will explain each one of the fence_ovh specific parametres
 
