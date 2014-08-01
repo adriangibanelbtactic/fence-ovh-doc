@@ -56,6 +56,22 @@ EOF
 
 }
 
+function boot_acl() {
+# $1 = Dedicated server ovh name
+DEDICATED_SERVER="$1"
+
+cat << EOF
+
+        {
+            "method": "GET",
+            "path": "/dedicated/server/${DEDICATED_SERVER}/boot*"
+        }
+
+EOF
+
+
+}
+
 # Generate POST_MAIN_RULES
 let servers_counter=0
 for nserver in ${DEDICATED_SERVER_OVH_NAMES}; do
@@ -73,6 +89,7 @@ for nserver in ${DEDICATED_SERVER_OVH_NAMES}; do
   fi
   POST_MAIN_RULES="${POST_MAIN_RULES}"",""$(hard_reboot_acl ${nserver})"
   POST_MAIN_RULES="${POST_MAIN_RULES}"",""$(task_acl ${nserver})"
+  POST_MAIN_RULES="${POST_MAIN_RULES}"",""$(boot_acl ${nserver})"
 
 done
 

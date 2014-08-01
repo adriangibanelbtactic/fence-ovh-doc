@@ -73,7 +73,8 @@ We will request a token from OVH to enable the OVH fencing agent to make request
 
 * PUT /dedicated/server/{serviceName} (Change boot device)
 * POST /dedicated/server/{serviceName}/reboot (Hard reboot your dedicated server)
-* GET /dedicated/server/{serviceName}/task/{taskId}
+* GET /dedicated/server/{serviceName}/task/{taskId} (Fetch task details)
+* GET /dedicated/server/{serviceName}/boot/ (Fetch server compatible netboots)
 
 In order to perform this request we will use our a home-made script named [fencing-ovh-request-authentication-code.sh](../master/fencing-ovh-request-authentication-code.sh) [(I recommend you to download it as raw file)] (https://github.com/adriangibanelbtactic/fence-ovh-doc/raw/master/fencing-ovh-request-authentication-code.sh).
 
