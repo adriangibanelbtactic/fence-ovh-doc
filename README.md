@@ -58,7 +58,7 @@ Alternatively you can handle OVH account user and password to your Proxmox HA sy
 
 ### Creation of your application keys
 
-Click on the following link: https://eu.api.ovh.com/createApp/, enter your customer ID, your password, and the name of your application. If your bussiness is called **mybu** we recommend you to use: **mybu-fencing-agent** as the application name.
+Click on the following link: https://eu.api.ovh.com/createApp/, enter your customer ID, your password, and the name of your application. If your business is called **mybu** we recommend you to use: **mybu-fencing-agent** as the application name.
 
 You get two keys:
 * the application key, named **AK**, e.g:
